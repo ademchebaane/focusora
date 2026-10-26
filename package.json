@@ -1,0 +1,17 @@
+{
+  "name": "focusora-study-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A colorful, mobile-first group study timer with shared goals and optional Supabase cloud sync.",
+  "scripts": {
+    "check": "node --check app.js",
+    "prepare:web": "node -e \"const fs=require('fs');fs.mkdirSync('www',{recursive:true});for(const f of ['index.html','app.css','app.js'])fs.copyFileSync(f,'www/'+f);\""
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/core": "^8.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.0.0"
+  }
+}

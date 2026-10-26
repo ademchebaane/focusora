@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="description" content="Focusora — study together, reach goals together.">
+  <title>Focusora — Study together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" data-nav="home" aria-label="Focusora home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>focusora</strong><small>better together</small></span>
+      </a>
+      <div class="workspace-label">YOUR SPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-nav="home"><span class="nav-ico">⌂</span><span>Overview</span></button>
+        <button class="nav-item" data-nav="focus"><span class="nav-ico">◷</span><span>Focus room</span><span class="nav-pill">GO</span></button>
+        <button class="nav-item" data-nav="groups"><span class="nav-ico">♧</span><span>Study groups</span></button>
+        <button class="nav-item" data-nav="friends"><span class="nav-ico">♙</span><span>Friends</span></button>
+        <button class="nav-item" data-nav="goals"><span class="nav-ico">◎</span><span>Goals & tasks</span></button>
+        <button class="nav-item" data-nav="insights"><span class="nav-ico">▥</span><span>Insights</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-quote"><span class="quote-spark">✳</span><p>Little by little,<br><b>a little becomes a lot.</b></p><small>YOUR DAILY REMINDER</small></div>
+        <button class="nav-item" data-nav="settings"><span class="nav-ico">⚙</span><span>Settings & cloud</span></button>
+        <div class="sidebar-profile" id="sidebarProfile"></div>
+      </div>
+    </aside>
+
+    <section class="main-column">
+      <header class="topbar">
+        <div class="mobile-brand brand">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span class="brand-copy"><strong>focusora</strong><small>better together</small></span>
+        </div>
+        <div class="breadcrumb" id="breadcrumb"><span>YOUR SPACE</span><b>/</b><strong>Overview</strong></div>
+        <div class="top-actions">
+          <span class="mode-chip" id="modeChip"><i></i><span>Demo mode</span></span>
+          <button class="icon-button" data-nav="settings" aria-label="Settings" title="Settings">⚙</button>
+          <button class="profile-button" data-nav="settings" id="topProfile" aria-label="Open profile">A</button>
+        </div>
+      </header>
+      <main id="mainView" class="main-view" tabindex="-1"></main>
+      <footer class="mobile-footer">
+        <button data-nav="home" class="mobile-nav active"><span>⌂</span><small>Home</small></button>
+        <button data-nav="focus" class="mobile-nav"><span>◷</span><small>Focus</small></button>
+        <button data-nav="groups" class="mobile-nav"><span>♧</span><small>Groups</small></button>
+        <button data-nav="friends" class="mobile-nav"><span>♙</span><small>Friends</small></button>
+        <button data-nav="goals" class="mobile-nav"><span>◎</span><small>Goals</small></button>
+      </footer>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-action="close-modal" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.focusora.study",
+  "appName": "Focusora",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
