@@ -59,8 +59,3 @@ jobs:
         with:
           name: focusora-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
-
-
-One important point: **don't add `sdkmanager "tools"`**. The old standalone Android `tools` package is obsolete; that is exactly the package name appearing in your error.
-
-If the next run fails, the useful part will be the **first red step after `Install Android SDK packages`**. At that point we'll know whether the remaining issue is Capacitor, npm, or Gradle.
